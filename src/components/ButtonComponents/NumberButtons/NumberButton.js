@@ -1,22 +1,12 @@
 import React from "react";
 
 const NumberButton = (props) => {
-  let style = {
-    borderRadius: "100%",
-    background: "blue",
-    color: "white",
-    border: "none"
-    //width: "148px"
-  };
+  let style = {};
 
   const checkIfZero = () =>{
-    console.log(props.number);
-    if(props.number !== "0"){
-      style.width = "88px";
-      style.height = "88px";
-      return style;
-    }
-    else{
+    //console.log(props.number);
+    if(props.number === "0"){
+      //console.log('here');
       style.width = "208px";
       style.height = "88px";
       style.borderRadius = "51%";

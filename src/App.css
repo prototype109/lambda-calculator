@@ -52,7 +52,13 @@ html{
 }
 
 button{
-    font-size: 3.5rem;
+	font-size: 3.5rem;
+	border-radius: 100%;
+    background: blue;
+    color: white;
+	border: none;
+	width: 88px;
+	height: 88px;
 }
 
 .container{
