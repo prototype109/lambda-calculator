@@ -7,9 +7,13 @@ import OperatorButton from './OperatorButton';
 //Import your array data to from the provided data file
 
 const Operators = () => {
+  const style = {
+    display: "flex",
+    flexDirection: "column"
+  };
   // STEP 2 - add the imported data to state
   return (
-    <div>
+    <div style={style}>
       {
         operators.map(operator => {
           console.log(operator.char);

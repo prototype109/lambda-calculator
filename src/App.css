@@ -59,10 +59,21 @@ button{
 	border: none;
 	width: 88px;
 	height: 88px;
+	margin: 10px;
 }
 
 .container{
     position: relative;
-    top: 294px;
-    left: 64px;
+	left: 64px;
+	background: red;
+	max-width: 439px;
+}
+
+.button-container{
+	display: flex;
+}
+
+.special-and-num{
+	display: flex;
+	flex-direction: column;
 }

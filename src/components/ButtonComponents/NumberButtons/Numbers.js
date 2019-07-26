@@ -12,7 +12,7 @@ const Numbers = () => {
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "space-around",
-    width: "350px"
+    maxWidth: "350px"
   };
   
   return (

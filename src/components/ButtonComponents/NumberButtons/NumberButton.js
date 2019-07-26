@@ -7,7 +7,7 @@ const NumberButton = (props) => {
     //console.log(props.number);
     if(props.number === "0"){
       //console.log('here');
-      style.width = "208px";
+      style.width = "203px";
       style.height = "88px";
       style.borderRadius = "51%";
       return style;
