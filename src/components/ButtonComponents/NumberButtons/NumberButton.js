@@ -9,14 +9,14 @@ const NumberButton = (props) => {
       //console.log('here');
       style.width = "203px";
       style.height = "88px";
-      style.borderRadius = "51%";
+      style.borderRadius = "60px";
       return style;
     }
   }
 
   return (
     <>
-        <button style={checkIfZero()}>{props.number}</button>
+        <button style={checkIfZero()} onClick={(e) => props.setDisplay(props.click(e))}>{props.number}</button>
       {/* Display a button element rendering the data being passed down from the parent container on props */}
     </>
   );

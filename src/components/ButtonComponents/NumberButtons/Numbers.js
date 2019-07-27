@@ -5,22 +5,28 @@ import NumberButton from './NumberButton';
 
 //Import your array data to from the provided data file
 
-const Numbers = () => {
+const Numbers = (props) => {
   // STEP 2 - add the imported data to state
-  const [currentNumber, setCurrentNumber] = useState();
+  //const [currentNumber, setCurrentNumber] = useState();
   const style = {
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "space-around",
     maxWidth: "350px"
   };
+
+  // const clickHandler = (e) => {
+  //   return e.target.textContent;
+  // }
   
   return (
     <div style={style}>
       {
         numbers.map(num => {
           //setCurrentNumber(num);
-          return <NumberButton number={num} />
+          return <NumberButton click={props.click} 
+                              setDisplay={props.setDisplay} 
+                              number={num}  />
         })
       }
       {/* STEP 3 - Use .map() to iterate over your array data and return a button

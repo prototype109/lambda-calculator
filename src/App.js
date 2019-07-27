@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useRef, useEffect} from "react";
 import "./App.css";
 import Numbers from "./components/ButtonComponents/NumberButtons/Numbers"
 import Display from "./components/DisplayComponents/Display";
@@ -16,18 +16,25 @@ function App() {
   // Your functions should accept a parameter of the the item data being displayed to the DOM (ie - should recieve 5 if the user clicks on
   // the "5" button, or the operator if they click one of those buttons) and then call your setter function to update state.
   // Don't forget to pass the functions (and any additional data needed) to the components as props
+  const [displayCurrentState, setDisplayCurrentState] = useState(0);
 
+  const clickHandler = (e) => {
+    return e.target.textContent;
+  }
+
+  //const valueBeforeUpdate = previousValue(displayCurrentState);
+ 
   return (
     <div className="container">
       <Logo />
       <div className="App">
-        <Display />
+        <Display value={displayCurrentState} />
         <div className="button-container">
           <div className="special-and-num">
-            <Specials />
-            <Numbers />
+            <Specials setDisplay={setDisplayCurrentState} click={clickHandler} />
+            <Numbers setDisplay={setDisplayCurrentState} click={clickHandler} />
           </div>
-            <Operators />
+            <Operators setDisplay={setDisplayCurrentState} click={clickHandler} />
         </div>
         {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
       </div>
@@ -35,4 +42,14 @@ function App() {
   );
 }
 
-export default App;
+// function previousValue(val){
+//   const prev = useRef()
+
+//   useEffect(() => {
+//     prev.current = val;
+//   }, [val]);
+
+//   return prev.current;
+// }
+
+ export default App;

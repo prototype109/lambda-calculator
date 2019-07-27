@@ -6,7 +6,7 @@ import OperatorButton from './OperatorButton';
 
 //Import your array data to from the provided data file
 
-const Operators = () => {
+const Operators = (props) => {
   const style = {
     display: "flex",
     flexDirection: "column"
@@ -17,7 +17,9 @@ const Operators = () => {
       {
         operators.map(operator => {
           console.log(operator.char);
-          return <OperatorButton operation={operator.char} />
+          return <OperatorButton operation={operator.char} 
+                                 click={props.click}
+                                 setDisplay={props.setDisplay} />
         })
         }
       {/* STEP 3 - Use .map() to iterate over your array data and return a button
