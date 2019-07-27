@@ -17,7 +17,8 @@ const Specials = (props) => {
         specials.map(specialChar => {
           return <SpecialButton click={props.click} 
                                 setDisplay={props.setDisplay} 
-                                special={specialChar} />
+                                special={specialChar} 
+                                current={props.current} />
         })
       }
       {/* STEP 3 - Use .map() to iterate over your array data and return a button

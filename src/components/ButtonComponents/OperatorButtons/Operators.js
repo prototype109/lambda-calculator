@@ -19,7 +19,8 @@ const Operators = (props) => {
           //console.log(operator.char);
           return <OperatorButton operation={operator.char} 
                                  click={props.click}
-                                 setDisplay={props.setDisplay} />
+                                 setDisplay={props.setDisplay} 
+                                 current={props.current} />
         })
         }
       {/* STEP 3 - Use .map() to iterate over your array data and return a button

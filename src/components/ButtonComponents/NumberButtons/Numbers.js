@@ -26,7 +26,8 @@ const Numbers = (props) => {
           //setCurrentNumber(num);
           return <NumberButton click={props.click} 
                               setDisplay={props.setDisplay} 
-                              number={num}  />
+                              number={num}  
+                              current={props.current} />
         })
       }
       {/* STEP 3 - Use .map() to iterate over your array data and return a button

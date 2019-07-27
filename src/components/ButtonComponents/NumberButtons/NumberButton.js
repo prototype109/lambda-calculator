@@ -3,7 +3,7 @@ import React from "react";
 const NumberButton = (props) => {
   let style = {};
 
-  const checkIfZero = () =>{
+  const styleZeroButton = () =>{
     //console.log(props.number);
     if(props.number === "0"){
       //console.log('here');
@@ -14,9 +14,20 @@ const NumberButton = (props) => {
     }
   }
 
+  function handleNumClick(e){
+    if(props.current === "0"){
+      //console.log(props.current);
+      props.setDisplay("");
+      props.setDisplay(props.click(e));
+    }
+    else{
+      props.setDisplay(props.current + props.click(e));
+    }
+  }
+
   return (
     <>
-        <button style={checkIfZero()} onClick={(e) => props.setDisplay(props.click(e))}>{props.number}</button>
+        <button style={styleZeroButton()} onClick={(e) => handleNumClick(e)}>{props.number}</button>
       {/* Display a button element rendering the data being passed down from the parent container on props */}
     </>
   );
