@@ -16,12 +16,15 @@ const OperatorButton = (props) => {
     }
 
     if(props.click(e) === "="){
-      props.setDisplay(eval(props.current));
+      props.setDisplay(eval(props.current).toString());
     }
+
+    if(props.click(e) === "x")
+      props.setDisplay(props.current + props.operation.value);
   }
   return (
     <>
-      <button onClick={(e) => handleOpClick(e)} style={style}>{props.operation}</button>
+      <button onClick={(e) => handleOpClick(e)} style={style}>{props.operation.char}</button>
       {/* Display a button element rendering the data being passed down from the parent container on props */}
     </>
   );
