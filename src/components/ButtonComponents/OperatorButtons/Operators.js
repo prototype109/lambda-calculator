@@ -16,7 +16,7 @@ const Operators = (props) => {
     <div style={style}>
       {
         operators.map(operator => {
-          console.log(operator.char);
+          //console.log(operator.char);
           return <OperatorButton operation={operator.char} 
                                  click={props.click}
                                  setDisplay={props.setDisplay} />
